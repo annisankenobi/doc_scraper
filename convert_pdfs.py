@@ -2,6 +2,8 @@
 import os
 import pdfplumber
 
+# this is a classic converter that reads normal layout PDFs
+
 def save_file(filepath, content):
     with open(filepath, 'w', encoding='utf-8') as outfile:
         outfile.write(content)
