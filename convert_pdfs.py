@@ -2,11 +2,9 @@
 import os
 import pdfplumber
 
-
 def save_file(filepath, content):
     with open(filepath, 'w', encoding='utf-8') as outfile:
         outfile.write(content)
-
 
 '''def convert_docx2txt(src_dir, dest_dir):
     files = os.listdir(src_dir)
@@ -17,8 +15,6 @@ def save_file(filepath, content):
         except Exception as oops:
             print(oops, file)'''
             
-
-
 def convert_pdf2txt(src_dir, dest_dir):
     files = os.listdir(src_dir)
     files = [i for i in files if '.pdf' in i]
@@ -32,9 +28,6 @@ def convert_pdf2txt(src_dir, dest_dir):
                 save_file(dest_dir+file.replace('.pdf','.txt'), output.strip())
         except Exception as oops:
             print(oops, file)
-
-
-
 
 if __name__ == '__main__':
     #convert_docx2txt('docx/', 'converted/')
