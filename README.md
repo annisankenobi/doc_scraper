@@ -1,5 +1,5 @@
 # Document Scraper
-This repository contains a tool to extract text from PDFs. Perk: Layout-aware text extraction from full-text PDF of scientific articles
+This repository contains a tool to extract text from PDFs. The perk of this tool is that enables layout-aware text extraction from full-text PDF of scientific articles.
 
 ## Contents
 
@@ -28,24 +28,24 @@ This tool adresses the absence of effective means to extract text from scientifi
     │
     ├── robust_converter.py
     │   
-    ├── .gitignore 
+    ├── convert_pdfs.py 
     │ 
     ├── README.md 
 
 ## Workflow
 
 As shown in the folder structure above, the project contains two key folders:
-- **PDFs**: Collection of PDFs.
-- **Converted**: Where txt files will be stored.
+- **PDFs**: Collection of PDFs
+- **Converted**: Where txt files will be stored
 
-In general, you want to create a folder within the Projects area to store files associated with the project.
+In general, you want to create the folders within the Projects area to store files associated with the project.
 
 ## QuickStart
 
 1. Place your PDF/s into the PDF folder
-2. Install dependencies (pdfminer)
+2. Install dependencies (pdfminer for layout-aware text extraction, pdfplumber for standard text extraction)
 3. Run the app
 `python robust_converter.py`
 
-Note: If your pdfs are in the basic layout format, you can also use `python convert_pdfs.py`.
+Note: If your PDFs have a basic layout format (no columns of text), you can also use `python convert_pdfs.py`.
 For this app you need to install pdfplumber
